@@ -57,7 +57,7 @@
     enable = true;
     memoryPercent = 75;
     algorithm = "lzo-rle"; # I love lzo-rle
-    priority = 10; # preferencia alta pela zram
+    priority = 5; # preferencia pela zram
   };
 
   # swap normal

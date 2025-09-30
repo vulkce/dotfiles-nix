@@ -27,6 +27,7 @@
            # disko-config.nix
           ./hardware-configuration.nix
           ./configs/tools/tools.nix
+          ./configs/tools/virtualbox.nix
           ./configs/DEs/DEs.nix
           ./configs/WMs/WMs.nix
           ./configs/users/users.nix
