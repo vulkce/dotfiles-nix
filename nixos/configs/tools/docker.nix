@@ -1,8 +1,8 @@
 { config, lib, inputs, pkgs, ... }:
+# irei adicionar mais coisas em breve :) 
 
   virtualisation.docker = {
     enable = true;
-    # Set up resource limits
     daemon.settings = {
       experimental = true;
       default-address-pools = [
