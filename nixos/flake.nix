@@ -25,7 +25,7 @@
            #   _module.args.disks = [ "/dev/xxx" ];
            # }
            # disko-config.nix
-          ./configs/system/imports.nix
+          ./imports.nix
       ];
     };
   };

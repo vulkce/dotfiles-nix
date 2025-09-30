@@ -1,4 +1,4 @@
-{ config, lib, inputs, pkgs, ... }:
+{ config, lib, inputs, pkgs, ... }: {
 # irei adicionar mais coisas em breve :) 
 
   virtualisation.docker = {
