@@ -3,7 +3,7 @@
  imports = [
    ./hardware-configuration.nix
    
-   # os arquivos são organizados considerando sua pasta!
+   # a lista é separada considerando sua pasta!
    ./configs/tools/tools.nix
    ./configs/tools/virtualbox.nix
    ./configs/tools/docker.nix
