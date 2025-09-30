@@ -2,7 +2,7 @@
 
    users.users.vulkce = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "vboxusers" ];
+     extraGroups = [ "wheel" "vboxusers" "docker" ];
      # pacotes do usuário
      packages = with pkgs; [
        tree
