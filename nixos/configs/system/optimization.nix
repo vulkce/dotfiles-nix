@@ -1,5 +1,11 @@
 { config, lib, inputs, pkgs, ... }: {
 
+  boot.kernelParams = [
+    "idle=poll" # pode reduzir latencia
+    "amd_pstate=active" # o hardware controla
+    # "isolcpus=<cpus>" # isola cores.
+  ];
+
   # otimiza o /nix/store trocando arquivos duplicados por hardlinks
   nix.optimise = {
     automatic = true;

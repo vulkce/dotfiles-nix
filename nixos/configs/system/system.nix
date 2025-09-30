@@ -7,11 +7,6 @@
   # define e configura o kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ ]; # modulos do kernel
-  boot.kernelParams = [
-    "idle=poll" # pode reduzir latencia
-    "amd_pstate=active" # o hardware controla
-    # "isolcpus=<cpus>" # isola cores.
-  ];
 
   # nome do sistema
   networking.hostName = "flake";
@@ -26,19 +21,6 @@
   networking.hostId = "8bec9fba";
   boot.supportedFilesystems = [ "zfs" ];
 
-  # otimiza o /nix/store trocando arquivos duplicados por hardlinks
-  nix.optimise = { 
-    automatic = true;
-    dates = [ "daily" ]; # otimiza diariamente 
-  };
-
-  # chama o caminhão de lixo pro nix
-  nix.gc = {
-    automatic = false; # nh já faz o trabalho
-    dates = [ "weekly" ]; # chama semanalmente 
-   # options = "--delete-older-than 30d"; # deleta todas a generations
-  };
-
   # pipewire
   services.pipewire = {
     enable = true;
@@ -51,22 +33,6 @@
     enable = true;
     powerOnBoot = true; # inicia o bluetooth no boot
   };
-
-  # habilita zram
-  zramSwap = {
-    enable = true;
-    memoryPercent = 75;
-    algorithm = "lzo-rle"; # I love lzo-rle
-    priority = 5; # preferencia pela zram
-  };
-
-  # swap normal
-  swapDevices = [
-    { 
-      device = "/dev/disk/by-uuid/d2b636cc-bf0e-4fb8-8448-ee032ebfdc8d"; # sempre usem UUIDs!!!
-      priority = 0; # usa o swap quando a zram encher
-    }
-  ];
 
   # habilita o nh 
   programs.nh = {
