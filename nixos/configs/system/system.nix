@@ -1,6 +1,4 @@
 { config, lib, pkgs, ... }: {
-  # será que esse arquivo tá ficando muito grande?
-  
   # usa systemd-boot
   boot.loader.systemd-boot.enable = true;
 
