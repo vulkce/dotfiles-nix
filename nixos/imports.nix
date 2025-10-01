@@ -16,7 +16,6 @@
    ./configs/packages/packages.nix
    
    ./configs/system/system.nix
-   ./configs/system/ram.nix
    ./configs/system/optimization.nix
 
    ./configs/exclude/gnome.nix
