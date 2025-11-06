@@ -14,10 +14,10 @@
   services.desktopManager.gnome.enable = false;
 
   # XFCE
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.xfce.enable = false;
 
   # cinnamon
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.xserver.desktopManager.cinnamon.enable = false;
 
   # evitar conflito entre gnome e kde
   programs.ssh.askPassword = lib.mkForce "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";

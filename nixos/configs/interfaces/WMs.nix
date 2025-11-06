@@ -7,12 +7,12 @@
   }; 
 
   # i3 WM
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.enable = false;
 
   # sway
-  programs.sway.enable = true;
+  programs.sway.enable = false;
 
   # openbox
-  services.xserver.windowManager.openbox.enable = true;
+  services.xserver.windowManager.openbox.enable = false;
 
 }

@@ -28,11 +28,11 @@
   };
 
   # swap normal
-  swapDevices = [
-    {
-      device = "/dev/disk/by-uuid/d2b636cc-bf0e-4fb8-8448-ee032ebfdc8d"; # sempre usem UUIDs!!!
-      priority = 0; # usa o swap quando a zram encher
-    }
-  ];
+#  swapDevices = [
+#    {
+#      device = "/dev/disk/by-uuid/d2b636cc-bf0e-4fb8-8448-ee032ebfdc8d"; # sempre usem UUIDs!!!
+#      priority = 0; # usa o swap quando a zram encher
+#    }
+#  ];
 
 } 

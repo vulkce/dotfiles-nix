@@ -3,9 +3,6 @@
   # ssh
    services.openssh.enable = true;
 
-  # flatpak
-   services.flatpak.enable = false;
-
   # gerenciador bluetooth
    services.blueman.enable = true;
 

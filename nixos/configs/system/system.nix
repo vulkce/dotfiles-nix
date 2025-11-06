@@ -54,6 +54,6 @@
   nixpkgs.config.allowUnfree = true;
 
   # versão no qual a primeira build foi feita!
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
 }

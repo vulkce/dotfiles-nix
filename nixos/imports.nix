@@ -4,9 +4,12 @@
    ./hardware-configuration.nix
    
    # a lista é separada considerando sua pasta!
+   
    ./configs/tools/tools.nix
-   ./configs/tools/virtualbox.nix
+#  ./configs/tools/virtualbox.nix
    ./configs/tools/docker.nix
+   ./configs/tools/steam.nix
+   ./configs/tools/flatpak.nix
    
    ./configs/interfaces/DEs.nix
    ./configs/interfaces/WMs.nix

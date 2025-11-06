@@ -9,24 +9,24 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/bf1719e6-097d-4a4d-8441-4abac81bd1b5";
+    { device = "/dev/disk/by-uuid/fca4b181-0bbb-477c-a18d-854fa7fd8541";
+      fsType = "xfs";
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/a2375a11-7685-40e8-8d94-595ee168fcef";
       fsType = "xfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FA52-EDA3";
+    { device = "/dev/disk/by-uuid/ABAC-A541";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/f039c684-9033-4c96-be65-301d6af7e33b";
-      fsType = "xfs";
     };
 
   swapDevices = [ ];
@@ -37,7 +37,6 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp7s0f3u2.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
