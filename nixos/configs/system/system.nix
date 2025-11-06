@@ -1,4 +1,5 @@
 { config, lib, pkgs, ... }: {
+
   # usa systemd-boot
   boot.loader.systemd-boot.enable = true;
 
@@ -52,6 +53,15 @@
 
   # unfree
   nixpkgs.config.allowUnfree = true;
+
+  # montar unidades automaticamente
+  fileSystems."/home/vulkce/Documents/games" = {
+  device = "/dev/disk/by-uuid/3ce75dae-2622-4057-b82c-553b6fe6a09b";
+  fsType = "xfs";
+  options = [ "users" "exec" "nofail" ]; 
+
+ };
+
 
   # versão no qual a primeira build foi feita!
   system.stateVersion = "25.11";

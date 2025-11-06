@@ -9,6 +9,7 @@
     gparted
     git
     fastfetch
+    steam-run
 
     # desenvolvimento
     pipenv
