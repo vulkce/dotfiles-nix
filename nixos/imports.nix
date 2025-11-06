@@ -9,7 +9,6 @@
 #  ./configs/tools/virtualbox.nix
    ./configs/tools/docker.nix
    ./configs/tools/steam.nix
-   ./configs/tools/flatpak.nix
    
    ./configs/interfaces/DEs.nix
    ./configs/interfaces/WMs.nix
@@ -17,7 +16,8 @@
    ./configs/users/vulkce.nix
    
    ./configs/packages/packages.nix
-   
+   ./configs/packages/flatpak.nix
+
    ./configs/system/system.nix
    ./configs/system/optimization.nix
 
