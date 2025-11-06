@@ -48,13 +48,7 @@
     allowedUDPPorts = [ ];
   };
 
-  # experimental
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # unfree
-  nixpkgs.config.allowUnfree = true;
-
-  # montar unidades automaticamente
+  # montar meu hd automaticamente
   fileSystems."/home/vulkce/Documents/games" = {
   device = "/dev/disk/by-uuid/3ce75dae-2622-4057-b82c-553b6fe6a09b";
   fsType = "xfs";
@@ -62,6 +56,11 @@
 
  };
 
+  # experimental
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # unfree
+  nixpkgs.config.allowUnfree = true;
 
   # versão no qual a primeira build foi feita!
   system.stateVersion = "25.11";
