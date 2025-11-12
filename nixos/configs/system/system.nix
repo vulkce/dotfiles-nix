@@ -5,7 +5,7 @@
 
   # define e configura o kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ ]; # modulos do kernel
+  boot.kernelModules = ["hid_playstation" "hid_sony" "uinput" ]; # modulos do kernel
 
   # nome do sistema
   networking.hostName = "flake";
@@ -17,8 +17,8 @@
   time.timeZone = "America/Sao_Paulo";
 
   # habilita suporte ao openZFS
-  networking.hostId = "8bec9fba";
-  boot.supportedFilesystems = [ "zfs" ];
+  # networking.hostId = "8bec9fba";
+  # boot.supportedFilesystems = [ "zfs" ];
 
   # pipewire
   services.pipewire = {
@@ -31,6 +31,14 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true; # inicia o bluetooth no boot
+  };
+
+  # configura o bluetooth
+  hardware.bluetooth.settings = {
+    General = {
+      ControllerMode = "bredr";
+      Experimental = true; # mostra mais informações sobre o dispositivo
+    };
   };
 
   # habilita o nh 
@@ -47,13 +55,12 @@
     allowedTCPPorts = [ 80 4580 9090 ];
     allowedUDPPorts = [ ];
   };
-
+    
   # montar meu hd automaticamente
   fileSystems."/home/vulkce/Documents/games" = {
-  device = "/dev/disk/by-uuid/3ce75dae-2622-4057-b82c-553b6fe6a09b";
-  fsType = "xfs";
-  options = [ "users" "exec" "nofail" ]; 
-
+    device = "/dev/disk/by-uuid/3ce75dae-2622-4057-b82c-553b6fe6a09b";
+    fsType = "xfs";
+    options = [ "users" "exec" "nofail" ]; 
  };
 
   # experimental

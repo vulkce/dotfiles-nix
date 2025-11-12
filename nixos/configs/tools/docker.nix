@@ -2,7 +2,7 @@
 # irei adicionar mais coisas em breve :) 
 
   virtualisation.docker = {
-    enable = true;
+    enable = false;
     daemon.settings = {
       experimental = true;
       default-address-pools = [
