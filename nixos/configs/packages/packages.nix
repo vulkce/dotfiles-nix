@@ -9,8 +9,12 @@
     gparted
     git
     fastfetch
-    steam-run
-
+    obs-studio
+    gnome-disk-utility
+    
+    # non-free
+    unrar
+    
     # desenvolvimento
     pipenv
     python314
