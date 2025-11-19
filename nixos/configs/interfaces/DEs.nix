@@ -1,8 +1,9 @@
 { config, lib, inputs, pkgs, ... }: {
 
   # SDDM
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = false;
+  services.displayManager.sddm.wayland.enable = false;
+  services.displayManager.cosmic-greeter.enable = true;
 
   # PLASMA
   services.desktopManager.plasma6.enable = true;

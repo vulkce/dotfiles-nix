@@ -42,12 +42,12 @@
   };
 
   # habilita o nh 
-  programs.nh = {
-    enable = true;
-    clean.enable = true; # faz o trabalho do cg
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/etc/nixos/"; # localização da minha flake 
-  };
+#  programs.nh = {
+#    enable = true;
+#    clean.enable = true; # faz o trabalho do cg
+#    clean.extraArgs = "--keep-since 4d --keep 3";
+#    flake = "/etc/nixos/"; # localização da minha flake 
+#  };
 
   # firewall
   networking.firewall = {
