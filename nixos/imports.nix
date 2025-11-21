@@ -20,6 +20,7 @@
 
    ./configs/system/system.nix
    ./configs/system/optimization.nix
+   ./configs/system/FileSystems.nix
 
    ./configs/exclude/gnome.nix
    ./configs/exclude/cosmic.nix
