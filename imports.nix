@@ -5,10 +5,10 @@
    
    # a lista é separada considerando sua pasta!
    
-   ./configs/tools/tools.nix
-#  ./configs/tools/virtualbox.nix
-   ./configs/tools/docker.nix
-   ./configs/tools/steam.nix
+   ./configs/etc/tools.nix
+#  ./configs/etc/virtualbox.nix
+   ./configs/etc/docker.nix
+   ./configs/etc/steam.nix
    
    ./configs/interfaces/DEs.nix
    ./configs/interfaces/WMs.nix
