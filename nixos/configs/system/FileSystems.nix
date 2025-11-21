@@ -1,5 +1,9 @@
 { config, lib, pkgs, ... }: {
 
+  # habilita suporte ao openZFS
+  networking.hostId = "8bec9fba";
+  boot.supportedFilesystems = [ "zfs" ];
+
   # montar meus hds automaticamente
   fileSystems."/home/vulkce/Documents/etc1" = {
     device = "/dev/disk/by-uuid/2896792c-503e-4e52-bbd6-05fc5ae67675";

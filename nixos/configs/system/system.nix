@@ -16,10 +16,6 @@
   # timezone
   time.timeZone = "America/Sao_Paulo";
 
-  # habilita suporte ao openZFS
-  # networking.hostId = "8bec9fba";
-  # boot.supportedFilesystems = [ "zfs" ];
-
   # pipewire
   services.pipewire = {
     enable = true;
