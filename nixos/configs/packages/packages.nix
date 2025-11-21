@@ -7,7 +7,6 @@
     wget
     kdePackages.qtstyleplugin-kvantum
     gparted
-    git
     fastfetch
     obs-studio
     gnome-disk-utility
