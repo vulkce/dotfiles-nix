@@ -13,8 +13,16 @@
     options = [ "users" "exec" "nofail" ];
  };
 
+   fileSystems."/home/vulkce/Documents/HD2" = {
+    device = "/dev/disk/by-uuid/1b8e11e0-d2f3-4d74-833a-1a1aca422b89";
+    fsType = "btrfs";
+    options = [ "users" "exec" "nofail" ];
+ };
 
-
-
+   fileSystems."/home/vulkce/Documents/etc2" = {
+    device = "/dev/disk/by-uuid/d47d9f1f-c57e-41b9-95cd-48f75d0500c8";
+    fsType = "btrfs";
+    options = [ "users" "exec" "nofail" ];
+ };
 
 }
