@@ -41,7 +41,7 @@
     };
   };
 
-   habilita o nh
+  # habilita o nh
   programs.nh = {
     enable = true;
     clean.enable = true; # faz o trabalho do cg
