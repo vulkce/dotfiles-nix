@@ -14,7 +14,7 @@
 
   # chama o caminhão de lixo pro nix
   nix.gc = {
-    automatic = true;
+    automatic = false;
     dates = [ "weekly" ]; # chama semanalmente
    # options = "--delete-older-than 30d"; # deleta todas a generations
   };
