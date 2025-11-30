@@ -1,4 +1,3 @@
 # dotfiles!
 
-### Estou tentando aprender a linguagem nix! 
-
+### REPOSITÓRIO MOVIDO -> https://github.com/vulkce/ephemeral-dotfiles-nix
